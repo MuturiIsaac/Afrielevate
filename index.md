@@ -1,6 +1,6 @@
 ---
 layout: default
-redirect_to: /index.html
+permalink: /
 ---
 [Blog](/blog)
 [Careers](/careers)
