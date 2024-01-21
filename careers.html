@@ -103,73 +103,148 @@
                <h2>CURRENT JOB OPENINGS<span>.</span></h2>
                <p>Explore the roles we are currently offering.</p>
            </div>
+       </div>
 
-           <div class="job-container">
+       <div class="job-container row">
+           <div class="col-md-4">
                <div class="job wow fadeInUpBig" data-wow-duration="1.5s">
-                   <h3>Frontend Developer</h3>
+                   <h4>Frontend Developer</h4>
                    <p>We are looking for a talented frontend developer to create beautiful and intuitive user interfaces.</p>
+                   <a href="#" class="btn font-btn apply-btn" data-toggle="modal" data-target="#interestModal"><i class="fal fa-chevron-right" aria-hidden="true"></i> <span>Apply Now</span></a>
                </div>
+           </div>
+           <div class="col-md-4">
                <div class="job wow fadeInUpBig" data-wow-duration="1.5s">
-                   <h3>Full Stack Developer</h3>
+                   <h4>Full Stack Developer</h4>
                    <p>Join us as a full stack developer and contribute to the development of innovative web applications.</p>
+                   <a href="#" class="btn font-btn apply-btn" data-toggle="modal" data-target="#interestModal"><i class="fal fa-chevron-right" aria-hidden="true"></i> <span>Apply Now</span></a>
                </div>
+           </div>
+           <div class="col-md-4">
                <div class="job wow fadeInUpBig" data-wow-duration="1.5s">
-                   <h3>UX/UI Designer</h3>
+                   <h4>UX/UI Designer</h4>
                    <p>Shape the user experience and user interface of our digital products to ensure an exceptional user journey.</p>
+                   <a href="#" class="btn font-btn apply-btn" data-toggle="modal" data-target="#interestModal"><i class="fal fa-chevron-right" aria-hidden="true"></i> <span>Apply Now</span></a>
                </div>
+           </div>
+           <div class="col-md-4">
                <div class="job wow fadeInUpBig" data-wow-duration="1.5s">
-                   <h3>Data Scientist</h3>
+                   <h4>Data Scientist</h4>
                    <p>Use your analytical skills to interpret complex data and help us make informed business decisions.</p>
+                   <a href="#" class="btn font-btn apply-btn" data-toggle="modal" data-target="#interestModal"><i class="fal fa-chevron-right" aria-hidden="true"></i> <span>Apply Now</span></a>
                </div>
+           </div>
+           <div class="col-md-4">
                <div class="job wow fadeInUpBig" data-wow-duration="1.5s">
-                   <h3>DevOps Engineer</h3>
+                   <h4>DevOps Engineer</h4>
                    <p>Streamline our development process by implementing efficient and automated deployment pipelines.</p>
+                   <a href="#" class="btn font-btn apply-btn" data-toggle="modal" data-target="#interestModal"><i class="fal fa-chevron-right" aria-hidden="true"></i> <span>Apply Now</span></a>
                </div>
-               <!-- Add more job roles here -->
            </div>
+           <!-- Add more job roles here -->
        </div>
    </div>
 </section>
 
-<!-- ======================================== JOB APPLICATION FORM ======================================== -->
-<section id="interestForm">
-   <div class="container">
-       <div class="part1">
-           <div class="sec-header">
-               <h2>EXPRESS YOUR INTEREST<span>.</span></h2>
-               <p>Apply for the desired role by submitting the form below.</p>
+<!-- Modal -->
+<div class="modal fade" id="interestModal" tabindex="-1" aria-labelledby="interestModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <h5 class="modal-title" id="interestModalLabel">EXPRESS YOUR INTEREST</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+               </button>
            </div>
+           <div class="modal-body">
+               <!-- JOB APPLICATION FORM content here -->
+               <!-- JOB APPLICATION FORM content here -->
+               <section id="interestForm">
+                  <div class="container">
+                     <div class="part1">
+                        <div class="sec-header">
+                              <h2>EXPRESS YOUR INTEREST<span>.</span></h2>
+                              <p>Apply for the desired role by submitting the form below.</p>
+                        </div>
+                     </div>
 
-           <form class="wow fadeInUpBig" data-wow-duration="1.5s">
-               <label for="fullName">Full Name:</label>
-               <input type="text" id="fullName" name="fullName" required>
+                     <div class="row">
+                        <div class="col-md-8">
+                              <form class="wow fadeInUpBig" data-wow-duration="1.5s">
+                                 <div class="form-card">
+                                    <label for="fullName">Full Name:</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                 </div>
 
-               <label for="email">Email Address:</label>
-               <input type="email" id="email" name="email" required>
+                                 <div class="form-card">
+                                    <label for="email">Email Address:</label>
+                                    <input type="email" id="email" name="email" required>
+                                 </div>
 
-               <label for="cv">Upload CV:</label>
-               <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required>
+                                 <div class="form-card">
+                                    <label for="telephone">Telephone Number:</label>
+                                    <div class="input-group">
+                                          <div class="input-group-prepend">
+                                             <select class="custom-select" id="countryCode" name="countryCode" required>
+                                                <!-- Add country codes as needed -->
+                                                <option value="+1">+1 (USA)</option>
+                                                <option value="+44">+44 (UK)</option>
+                                                <!-- Add more country codes here -->
+                                             </select>
+                                          </div>
+                                          <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                    </div>
+                                 </div>
 
-               <label for="role">Select Role:</label>
-               <select id="role" name="role" required>
-                   <option value="frontendDeveloper">Frontend Developer</option>
-                   <option value="fullStackDeveloper">Full Stack Developer</option>
-                   <option value="uxUiDesigner">UX/UI Designer</option>
-                   <option value="dataScientist">Data Scientist</option>
-                   <option value="devOpsEngineer">DevOps Engineer</option>
-                   <!-- Add more job roles here -->
-               </select>
+                                 <div class="form-card">
+                                    <label for="cv">Upload CV:</label>
+                                    <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required>
+                                 </div>
 
-               <label for="termsConditions">
-                   <input type="checkbox" id="termsConditions" name="termsConditions" required>
-                   I agree to the Terms and Conditions
-               </label>
+                                 <div class="form-card">
+                                    <label for="role">Select Role:</label>
+                                    <select id="role" name="role" required>
+                                          <option value="frontendDeveloper">Frontend Developer</option>
+                                          <option value="fullStackDeveloper">Full Stack Developer</option>
+                                          <option value="uxUiDesigner">UX/UI Designer</option>
+                                          <option value="dataScientist">Data Scientist</option>
+                                          <option value="devOpsEngineer">DevOps Engineer</option>
+                                          <!-- Add more job roles here -->
+                                    </select>
+                                 </div>
 
-               <button type="submit" class="btn layer-btn">SUBMIT APPLICATION</button>
-           </form>
+                                 <div class="form-card">
+                                    <label for="termsConditions">
+                                          <input type="checkbox" id="termsConditions" name="termsConditions" required>
+                                          I agree to the Terms and Conditions
+                                    </label>
+                                 </div>
+
+                                 <div class="form-card">
+                                    <button type="button" class="btn layer-btn" data-toggle="modal" data-target="#successModal">SUBMIT APPLICATION</button>
+                                 </div>
+                              </form>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+           </div>
        </div>
    </div>
-</section>
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+
 
  <!-- ======================================== FOOTER SECTION ======================================== -->
  <section id="footerSection">
