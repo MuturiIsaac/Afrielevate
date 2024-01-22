@@ -1335,3 +1335,11 @@ i {
       margin-right: 0px; }
     #featureSection .col-lg-7 .img-box .img02 {
       width: 90%; } }
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  .form-card {
+    margin-bottom: 15px; /* Example adjustment */
+  }
+}
+
+

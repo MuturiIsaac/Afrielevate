@@ -18,7 +18,13 @@
    <!-- MAGNIFIC POPUP PLUGIN -->
    <link rel="stylesheet" href="css/magnific-popup.css">
    <link rel="stylesheet" href="css/custom.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
    <title>afrielevate|Tech</title>
+   <style>
+      #jobSection {
+          margin-bottom: 40px; /* Adjust the value to your preference */
+      }
+  </style>
 </head>
 <body>
 
@@ -159,51 +165,48 @@
            <div class="modal-body">
                <!-- JOB APPLICATION FORM content here -->
                <!-- JOB APPLICATION FORM content here -->
+            <!-- JOB APPLICATION FORM content here -->
+               <!-- JOB APPLICATION FORM content here -->
                <section id="interestForm">
                   <div class="container">
                      <div class="part1">
                         <div class="sec-header">
-                              <h2>EXPRESS YOUR INTEREST<span>.</span></h2>
                               <p>Apply for the desired role by submitting the form below.</p>
                         </div>
                      </div>
 
                      <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-12">
                               <form class="wow fadeInUpBig" data-wow-duration="1.5s">
                                  <div class="form-card">
                                     <label for="fullName">Full Name:</label>
-                                    <input type="text" id="fullName" name="fullName" required>
+                                    <input type="text" id="fullName" name="fullName" class="form-control" required>
                                  </div>
 
                                  <div class="form-card">
                                     <label for="email">Email Address:</label>
-                                    <input type="email" id="email" name="email" required>
+                                    <input type="email" id="email" name="email" class="form-control" required>
                                  </div>
-
                                  <div class="form-card">
-                                    <label for="telephone">Telephone Number:</label>
-                                    <div class="input-group">
-                                          <div class="input-group-prepend">
-                                             <select class="custom-select" id="countryCode" name="countryCode" required>
-                                                <!-- Add country codes as needed -->
-                                                <option value="+1">+1 (USA)</option>
-                                                <option value="+44">+44 (UK)</option>
-                                                <!-- Add more country codes here -->
-                                             </select>
-                                          </div>
-                                          <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                                    </div>
+                                    <label for="email">Phone Number:</label>
+                                    <form>
+                                       <input id="phone" type="tel" name="phone" placeholder="Enter your phone number">
+                                    </form>
                                  </div>
 
+                                  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+                                  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+                                  <script>
+                                    
+                                  </script>
                                  <div class="form-card">
                                     <label for="cv">Upload CV:</label>
-                                    <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required>
+                                    <input type="file" id="cv" name="cv" class="form-control-file" accept=".pdf, .doc, .docx" required>
                                  </div>
 
                                  <div class="form-card">
                                     <label for="role">Select Role:</label>
-                                    <select id="role" name="role" required>
+                                    <select id="role" name="role" class="form-control" required>
                                           <option value="frontendDeveloper">Frontend Developer</option>
                                           <option value="fullStackDeveloper">Full Stack Developer</option>
                                           <option value="uxUiDesigner">UX/UI Designer</option>
@@ -214,14 +217,14 @@
                                  </div>
 
                                  <div class="form-card">
-                                    <label for="termsConditions">
+                                    <label for="termsConditions" class="checkbox-label">
                                           <input type="checkbox" id="termsConditions" name="termsConditions" required>
                                           I agree to the Terms and Conditions
                                     </label>
                                  </div>
 
-                                 <div class="form-card">
-                                    <button type="button" class="btn layer-btn" data-toggle="modal" data-target="#successModal">SUBMIT APPLICATION</button>
+                                 <div class="form-card text-center">
+                                    <button type="submit" class="btn layer-btn" data-toggle="modal" data-target="#successModal">SUBMIT APPLICATION</button>
                                  </div>
                               </form>
                         </div>
@@ -229,18 +232,24 @@
                   </div>
                </section>
 
+
            </div>
        </div>
    </div>
 </div>
 
+<script>
  
+   const phoneInputField = document.querySelector("#phone");
+       const phoneInput = window.intlTelInput(phoneInputField, {
+         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+         // Optional customizations:
+         initialCountry: "us",  // Set initial country
+         preferredCountries: ["us", "gb", "ca"],  // Prioritize certain countries
+         // Other options: https://intl-tel-input.com/docs/options/
+       });
 
-
-
-
-
-
+</script>
 
 
 
